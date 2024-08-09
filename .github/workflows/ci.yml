@@ -25,11 +25,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: worksheet2/my-react=app
+        working-directory: ./worksheet2/my-react-app
 
       - name: Run the tests
         run: npm test
-        working-directory: worksheet2/my-react=app
+        working-directory: ./worksheet2/my-react-app
 
       - name: Build
         run: npm run build

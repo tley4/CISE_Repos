@@ -14,22 +14,23 @@ jobs:
       matrix:
         node-version: [14.x]
 
+    defaults:
+      run:
+        working-directory: worksheet2/my-react-app 
+
     steps:
     - uses: actions/checkout@v2
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
-      with:
+      with:cd
         node-version: '14.x'
 
     - name: Install dependencies
       run: npm install
-      working-directory: ./worksheet2/my-react-app
 
     - name: Run Build
       run: npm run build
-      working-directory: ./worksheet2/my-react-app
 
     - name: Run tests
       run: npm test
-      working-directory: ./worksheet2/my-react-app/package.json

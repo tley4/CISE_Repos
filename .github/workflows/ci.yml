@@ -24,11 +24,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: ./worksheet2/my-react-app/package.json
+      working-directory: ./worksheet2/my-react-app
 
     - name: Run Build
       run: npm run build
-      working-directory: ./worksheet2/my-react-app/package.json
+      working-directory: ./worksheet2/my-react-app
 
     - name: Run tests
       run: npm test

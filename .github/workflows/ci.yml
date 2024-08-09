@@ -19,18 +19,19 @@ jobs:
         working-directory: worksheet2/my-react-app 
 
     steps:
-    - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:cd
-        node-version: '14.x'
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run Build
-      run: npm run build
+      - name: Run the tests
+        run: npm test
 
-    - name: Run tests
-      run: npm test
+      - name: Build
+        run: npm run build

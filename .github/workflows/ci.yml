@@ -10,8 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    run: 
-      working-directory: ./worksheet2/my-react-app
+    default:
+      run: 
+        working-directory: ./worksheet2/my-react-app
 
     strategy:
       matrix:
